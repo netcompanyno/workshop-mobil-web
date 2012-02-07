@@ -1,0 +1,67 @@
+html {
+    background-color: #add8e6;
+    font-size: 12pt;
+    font-family: 'Arial';
+    width: 100%;
+}
+
+#innhold {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    padding: 15px;
+	border-radius:15px;
+    background-color: #ffffff;
+}
+
+#innhold a {
+	
+    background-color: #cccccc;
+    padding: 5px;
+    border: 1px solid;
+	text-decoration: none;
+	color: #000000;
+	margin: 10px;
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0.4em 0;
+}
+
+input {
+    width: 90%;
+}
+
+.error {
+    color: #8b0000;
+    padding-left: 5px;
+}
+
+.clearfix:after{
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	font-size: 0;
+}
+
+audio {
+    background-color: #95B9C7;
+	padding: 10px;
+	width:80%;
+}
+
+#map_canvas  {
+	height: 250px; 
+	border-right: 1px solid #666666; 
+	border-bottom: 1px solid #666666; 
+	border-top: 1px solid #AAAAAA; 
+	border-left: 1px solid #AAAAAA; 
+}
+
+.gradient {
+	background: -webkit-gradient(radial, center center, 0, center center, 460, from(#1a82f7), to(#2F2727));
+}

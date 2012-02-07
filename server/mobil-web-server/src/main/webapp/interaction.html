@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>WebServer - Interaksjon</title>	
+    <link type="text/css" rel="stylesheet" href="css/stil.css"/>
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />
+  </head>
+  <body>
+    <header id="header">
+		<h1>Interaksjon</h1>
+	</header>
+    <div id="innhold">
+		<script type="text/javascript">
+			function submitform()
+			{
+				var name = document.forms.toast.message.value;	
+				AndroidApi.showToast("Hei!");				
+			}
+		</script>
+		<form name="toast">
+			<input name="message" type="text" placeholder="Hva vil du si?" /><br/>			
+			<a href="javascript: submitform()">Submit</a>
+		</form>
+	</div>	
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>WebServer - GEO-location</title>	
+    <link type="text/css" rel="stylesheet" href="css/stil.css"/>
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />
+  </head>
+  <body>
+    <header id="header">
+		<h1>GeoLocation</h1>
+		<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+	</header>
+    <div id="innhold">
+		<div id="map_canvas"></div>
+		<button onClick="TestGeo(); return false">Finn meg</button>
+		<script type="text/javascript" >
+
+			function TestGeo() {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition( TestMap, error, {maximumAge: 30000, timeout: 90000, enableHighAccuracy: true} );
+				}
+				else {
+					alert("Din browser støtter ikke geolocation.");
+				}
+			}
+			
+			var map;
+			function TestMap(position) {
+
+			   // Define the coordinates as a Google Maps LatLng Object
+			   var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+			   // Prepare the map options
+			   var mapOptions =
+					{
+					  zoom: 15,
+					  center: coords,
+					  mapTypeControl: false,
+					  navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+					  mapTypeId: google.maps.MapTypeId.ROADMAP
+					};
+
+				// Create the map, and place it in the map_canvas div
+				map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+				// Place the initial marker
+				var marker = new google.maps.Marker({
+					  position: coords,
+					  map: map,
+					  title: "Her er du nå :D"
+				});
+			}
+
+			function error() {
+				alert("Kan ikke lokalisere din posisjon, sjekk internettilkobling (og gps)");
+			}
+		</script>
+	</div>	
+  </body>
+</html>

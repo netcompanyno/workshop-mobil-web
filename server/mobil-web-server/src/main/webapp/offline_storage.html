@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>WebServer - Offline storage</title>	
+    <link type="text/css" rel="stylesheet" href="css/stil.css"/>
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />
+  </head>
+  <body>
+    <header id="header">
+		<h1>Offline storage</h1>
+	</header>
+    <div id="innhold">
+		<div id="counter"> </div>
+		<script type="text/javascript">
+			if (typeof(localStorage) == 'undefined') {
+				alert('Your browser does not support HTML5 localStorage. Try upgrading.');
+			} else {
+				if (localStorage.pagecount){
+					localStorage.pagecount=Number(localStorage.pagecount) +1;
+					}
+				else{
+					localStorage.pagecount=1;
+					}
+				document.write("Du har besøkt denne siden " + localStorage.pagecount + " ganger.");
+			}
+		</script> 				
+	</div>	
+  </body>
+</html>
