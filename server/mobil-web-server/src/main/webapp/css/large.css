@@ -1,11 +1,21 @@
+@font-face {
+  font-family: 'Casco';
+  src: url('Rom_Ftl_Srif_Std_Juan_Casco.TTF');
+}
+
+@font-face {
+  font-family: 'Litos';
+  src: url('Litos_Script_regular.otf');
+}
+
 html {
-    background-color: #add8e6;
+    background-color: #efefef;
     font-size: 12pt;
-    font-family: 'Arial';
+	font-family: Litos, sans-serif;
     width: 100%;
 }
 
-#innhold {
+nav {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -15,7 +25,7 @@ html {
     background-color: #ffffff;
 }
 
-#innhold a {
+nav a {
 	
     background-color: #cccccc;
     padding: 5px;
@@ -24,6 +34,7 @@ html {
 	color: #000000;
 	margin: 10px;
 	display: block;
+	font-family: Litos, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6, p {

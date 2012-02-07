@@ -3,14 +3,15 @@
   <head>
     <meta charset=UTF-8>
     <title>WebServer - Interaksjon</title>	
-    <link type="text/css" rel="stylesheet" href="css/stil.css"/>
-	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />
+    <link rel="stylesheet" media="only screen and (max-width:481px)" href="css/medium.css" />
+    <link rel="stylesheet" media="only screen and (min-width: 482px)" href="css/large.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
   </head>
   <body>
     <header id="header">
 		<h1>Interaksjon</h1>
 	</header>
-    <div id="innhold">
+    <nav id="innhold">
 		<script type="text/javascript">
 			function submitform()
 			{
@@ -22,6 +23,6 @@
 			<input name="message" type="text" placeholder="Hva vil du si?" /><br/>			
 			<a href="javascript: submitform()">Submit</a>
 		</form>
-	</div>	
+	</nav>	
   </body>
 </html>

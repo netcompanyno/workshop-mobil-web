@@ -3,14 +3,15 @@
   <head>
     <meta charset=UTF-8>
     <title>WebServer - Audio</title>	
-    <link type="text/css" rel="stylesheet" href="css/stil.css"/>
-	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />
+    <link rel="stylesheet" media="only screen and (max-width:481px)" href="css/medium.css" />
+    <link rel="stylesheet" media="only screen and (min-width: 482px)" href="css/large.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
   </head>
   <body>
     <header id="header">
 		<h1>Audio</h1>
 	</header>
-    <div id="innhold">
+    <nav id="innhold">
 		<h2>Face down - The Red Jumpsuit Apparatus</h2>
 		<audio controls="controls">
 			<source src="audio/face_down.mp3" type="audio/mpeg" />
@@ -22,6 +23,6 @@
 			<source src="http://wno114030.web17.talkactive.net/html5/audio/music.mp3 " type="audio/mpeg" />
 		</audio>
 		
-	</div>	
+	</nav>	
   </body>
 </html>
