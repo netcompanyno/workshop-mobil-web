@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout
+		android:id="@+id/layoutButtons"
+		android:layout_alignParentBottom="true"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:weightSum="1">
+		<Button
+			android:id="@+id/buttonRefresh"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:text="@string/refresh"
+			android:layout_weight="0.5" />
+		<Button
+			android:id="@+id/buttonChange"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="0.5" android:text="@string/change"/>
+	</LinearLayout>
+	<WebView
+		android:id="@+id/webView"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_above="@id/layoutButtons"/>
+
+
+</RelativeLayout>

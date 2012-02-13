@@ -1,0 +1,113 @@
+/* START Oppgave 4.4 */
+@font-face {
+  font-family: 'Casco';
+  src: url('Rom_Ftl_Srif_Std_Juan_Casco.TTF');
+}
+
+@font-face {
+  font-family: 'Litos';
+  src: url('Litos_Script_regular.otf');
+}
+
+@font-face {
+  font-family: 'Santana';
+  src: url('Santana.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Regular.ttf');
+}
+/* END Oppgave 4.4 */
+
+html {
+    background-color: #efefef;
+    font-size: 1.2em;
+	
+	/* START Oppgave 4.4 */
+	font-family: Casco, sans-serif;
+    /* END Oppgave 4.4 */
+	
+    width: 100%;
+}
+
+nav {
+    margin-top: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid;
+    padding: 0.4em;
+	
+	/* START Oppgave 4.2 */
+	border-radius:10px;	
+	/* END Oppgave 4.2 */
+	
+    background-color: #ffffff;
+}
+
+nav a {
+	
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 5px;
+    border: 1px solid #333333;
+	text-decoration: none;
+	color: #555555;
+	margin: 10px;
+	display: block;
+	border-radius:5px;
+	vertical-align: middle;
+}
+
+nav img {
+	vertical-align: middle;
+}
+
+#video-link {
+	display: none;
+}
+
+#image {
+	width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0.4em 0;
+}
+
+input {
+    width: 90%;
+}
+
+.error {
+    color: #8b0000;
+    padding-left: 5px;
+}
+
+.clearfix:after{
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+	font-size: 0;
+}
+
+audio {
+    background-color: #95B9C7;
+	padding: 10px;
+	width:80%;
+}
+
+#map_canvas  {
+	height: 250px; 
+	border-right: 1px solid #666666; 
+	border-bottom: 1px solid #666666; 
+	border-top: 1px solid #AAAAAA; 
+	border-left: 1px solid #AAAAAA; 
+}
+
+/* START Oppgave 4.3 */
+.gradient {
+	background-image: -webkit-linear-gradient(bottom, rgb(153,204,0) 0%, rgb(255,255,255) 100%);
+}
+/* START Oppgave 4.3 */
