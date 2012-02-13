@@ -25,7 +25,7 @@
 		android:id="@+id/webView"
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
-		android:layout_above="@id/layoutButtons" />
+		android:layout_above="@id/layoutButtons"/>
 
 
 </RelativeLayout>

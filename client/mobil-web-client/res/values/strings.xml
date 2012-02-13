@@ -3,5 +3,5 @@
     <string name="hello">Hello World, IndexActivity!</string>
     <string name="app_name">AndroidWeb</string>
     <string name="refresh">Oppdater nettsiden</string>
-    <string name="change">Endre tittel</string>
+    <string name="change">Endre elementer</string>
 </resources>

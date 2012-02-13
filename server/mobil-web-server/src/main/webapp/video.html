@@ -1,25 +1,24 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
   <head>
     <meta charset=UTF-8>
-    <title>WebServer - Interaksjon</title>	
+    <title>WebServer - Video</title>	
     <link rel="stylesheet" media="only screen and (max-width:481px)" href="css/medium.css" />
     <link rel="stylesheet" media="only screen and (min-width: 482px)" href="css/large.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
   </head>
   <body>
     <header id="header">
-		<h1>Interaksjon</h1>
+		<h1>Video</h1>
 	</header>
     <nav id="innhold">
-		<h1 id="title">Venter på bildeinput...</h1>
-		<img src="" id="image" />
-		<script type="text/javascript">
-			function changeTitle(title) {
-				document.getElementById("title").innerHTML = title;
-				document.getElementById("image").src = "http://www.mesan.no/filestore/Bwhouse4.jpg?size=580x1000";
-			}
-		</script> 
+		<h2>BigBuck!</h2>
+		
+		<video width="800" controls="controls" poster="images/poster.jpg">
+			<source src="video/BigBuck.m4v" type="video/mp4" />
+			<source src="video/BigBuck.webm" type="video/webm" />			
+			<a href="video/BigBuck.m4v">Last ned videoen her</a>
+		</video>		
 	</nav>	
   </body>
 </html>

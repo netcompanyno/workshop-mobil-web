@@ -42,18 +42,24 @@ public class IndexActivity extends Activity {
 		buttonChange = (Button) findViewById(R.id.buttonChange);
 
 		webView = (WebView) findViewById(R.id.webView);
-		webView.setWebViewClient(new MyWebViewClient());
+		webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);		
+		
+		webView.setWebViewClient(new MyWebViewClient());		
+
+		// TODO: Oppgave 2.5
 		webView.getSettings().setJavaScriptEnabled(true);
 
+		// TODO: Oppgave 3.3
 		webView.getSettings().setDatabaseEnabled(true);
 		String databasePath = this.getApplicationContext().getDir("database", Context.MODE_PRIVATE).getPath();
 		webView.getSettings().setDatabasePath(databasePath);
 		webView.getSettings().setDomStorageEnabled(true);
 
+		// TODO: Oppgave 3.4
 		webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 		webView.getSettings().setGeolocationEnabled(true);
-		//webView.getSettings().setGeolocationDatabasePath("/data/data/no.mesan.web.client");
-
+		webView.getSettings().setGeolocationDatabasePath("/data/data/no.mesan.web.client");
+		
 		webView.setWebChromeClient(new WebChromeClient() {
 			public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
 				callback.invoke(origin, true, false);
@@ -64,10 +70,8 @@ public class IndexActivity extends Activity {
 				quotaUpdater.updateQuota(5 * 1024 * 1024);
 			}
 		});
-		
-		
-		webView.addJavascriptInterface(new ToastInterface(this), "AndroidApi");
 
+		// TODO: Oppgave 2.2.a
 		webView.loadUrl(URL);
 	}
 
@@ -75,6 +79,7 @@ public class IndexActivity extends Activity {
 		buttonRefresh.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
+				// TODO: Oppgave 2.2.d
 				webView.clearCache(true);
 				webView.loadUrl(URL);
 			}
@@ -83,12 +88,15 @@ public class IndexActivity extends Activity {
 		buttonChange.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
+				// TODO: Oppgave 5.2
 				webView.loadUrl("javascript:changeTitle('Endret tittel')");
 			}
 		});
 	}
 
 	private class MyWebViewClient extends WebViewClient {
+
+		// TODO: Oppgave 2.4
 		@Override
 		public boolean shouldOverrideUrlLoading(WebView view, String url) {
 
@@ -104,11 +112,11 @@ public class IndexActivity extends Activity {
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// TODO: Oppgave 2.3
 		if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
 			webView.goBack();
 			return true;
 		}
 		return super.onKeyDown(keyCode, event);
 	}
-
 }
