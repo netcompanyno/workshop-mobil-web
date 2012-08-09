@@ -1,0 +1,9 @@
+Vi benytter en JLHTTP-server. Den består av kun en eneste .jar-fil.
+
+Start server gjennom å åpne kommandolinje i gjeldende mappe og skriv:
+java -jar server.jar <sti til rotmappe for html-filene dine> <portnummer>
+
+Eksempelvis:
+java -jar server.jar c:\web\mesan\workshop 8080
+
+I eksempelet vil man starte server i c:\web\mesan\workshop, mens nettadressen din vil være http://localhost:8080
